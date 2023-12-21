@@ -1,6 +1,5 @@
 # Created by jle@sitetracker.com at 12/19/23
 Feature: # Enter feature name here
-  # Enter feature description here
 
   Scenario: User login
       Given Open the main page
