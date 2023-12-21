@@ -2,6 +2,7 @@ from pages.base_page import Page
 from pages.search_results_page import SearchResultsPage
 from pages.login_page import LogInPage
 from pages.main_page import MainPage
+#Test
 
 class Application:
 
