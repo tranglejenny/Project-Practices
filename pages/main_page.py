@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import Select
+##Test
 
 class MainPage(Page):
     SETTINGS = (By.XPATH, "//div[@class='menu-button-text' and text()='Settings']")

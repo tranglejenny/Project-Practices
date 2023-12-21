@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
-#from support.logger import logger
+
 
 from app.application import Application
 
@@ -33,7 +33,6 @@ def browser_init(context, scenario_name):
     #     options=options,
     #     service=service
     # )
-
     context.driver.set_window_size(1280, 720)
 
 
