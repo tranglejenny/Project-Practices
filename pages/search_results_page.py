@@ -1,6 +1,8 @@
 from pages.base_page import Page
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
 from time import sleep
 
 class SearchResultsPage (Page):
@@ -16,7 +18,8 @@ class SearchResultsPage (Page):
             self.find_elements(*self.INPUT_FIELDS)
 
     def send_application(self):
-        self.find_element(*self.SEND_APPLICATION).click()
-        sleep(2)
+        application = WebDriverWait (self.driver,25).until(EC.element_to_be_clickable(self.SEND_APPLICATION))
+        application.click()
+
 
 
