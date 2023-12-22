@@ -10,7 +10,7 @@ class SearchResultsPage (Page):
     SEND_APPLICATION = (By.CSS_SELECTOR, "[type = 'submit']")
     def verify_search_url(self, expected_partial_url):
         self.verify_partial_url(expected_partial_url)
-        sleep(2)
+        sleep(4)
 
     def input_fields(self):
         fields = self.find_elements(*self.INPUT_FIELDS)
