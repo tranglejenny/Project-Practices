@@ -50,6 +50,7 @@ def browser_init(context, scenario_name):
     # }
     # options.set_capability('bstack:options', bstack_options)
     # context.driver = webdriver.Remote(command_executor=url, options=options)
+    # comment
 
 
 
