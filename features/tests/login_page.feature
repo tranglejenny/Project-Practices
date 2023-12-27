@@ -1,7 +1,7 @@
 # Created by jle@sitetracker.com at 12/19/23
 Feature:# Test Test
 
-  Scenario: User login
+  Scenario: User login for cloud
       Given Open the main page
       When Log in to the page
       Then Click on settings option

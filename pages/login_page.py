@@ -15,15 +15,16 @@ class LogInPage(Page):
         sleep(4)
 
     def login_page(self):
-        email = WebDriverWait (self.driver,20).until(EC.presence_of_element_located(self.EMAIL))
+        email = WebDriverWait (self.driver,25).until(EC.presence_of_element_located(self.EMAIL))
 
         email.send_keys("tranglejenny@yahoo.com")
 
-        password = WebDriverWait (self.driver,20).until(EC.presence_of_element_located(self.PASSWORD))
+        password = WebDriverWait (self.driver,25).until(EC.presence_of_element_located(self.PASSWORD))
 
         password.send_keys("Victoria13")
-
-
         sleep(4)
+
+
+
         login = WebDriverWait (self.driver,20).until(EC.element_to_be_clickable(self.LOGIN))
         login.click()
