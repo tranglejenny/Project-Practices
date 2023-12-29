@@ -16,9 +16,9 @@ def browser_init(context, scenario_name):
 
 
 
-    # driver_path = ChromeDriverManager().install()
-    # service = Service(driver_path)
-    # context.driver = webdriver.Chrome(service=service)
+    driver_path = ChromeDriverManager().install()
+    service = Service(driver_path)
+    context.driver = webdriver.Chrome(service=service)
 
     ###### Other Browser:
     # service = Service(executable_path="/Users/jle@sitetracker.com/PycharmProjects/Project-Practices/geckodriver")
@@ -37,25 +37,26 @@ def browser_init(context, scenario_name):
 
     ### BROWSERSTACK ###
     # Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settings
-    bs_user = 'jennyle_2L1kaj'
-    bs_key = 'Fy2pXEdxkdY4eTRXJdGX'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-
-    options = Options()
-    bstack_options = {
-        'os': 'Windows',
-        'osVersion': '10',
-        'browserName': 'Firefox',
-        'sessionName': scenario_name
-    }
-    options.set_capability('bstack:options', bstack_options)
-    context.driver = webdriver.Remote(command_executor=url, options=options)
-
-
+    # bs_user = 'jennyle_2L1kaj'
+    # bs_key = 'Fy2pXEdxkdY4eTRXJdGX'
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    #
+    # options = Options()
+    # bstack_options = {
+    #     'os': 'Windows',
+    #     'osVersion': '10',
+    #     'browserName': 'Firefox',
+    #     'sessionName': scenario_name
+    # }
+    # options.set_capability('bstack:options', bstack_options)
+    # context.driver = webdriver.Remote(command_executor=url, options=options)
 
 
 
-    context.driver.set_window_size(1280, 720)
+
+
+    #context.driver.set_window_size(1280, 720)
+    context.driver.maximize_window()
 
 
     context.driver.wait = WebDriverWait(context.driver, 15)

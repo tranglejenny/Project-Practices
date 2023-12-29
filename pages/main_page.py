@@ -12,10 +12,11 @@ class MainPage(Page):
     ADD_PROJ = (By.XPATH, "//div[@class='setting-text' and text()='Add a project']")
 
     def open_settings(self):
-        settings = WebDriverWait (self.driver,30).until(EC.element_to_be_clickable(self.SETTINGS))
+        settings = WebDriverWait (self.driver,40).until(EC.element_to_be_clickable(self.SETTINGS))
         settings.click()
 
     def add_a_project(self):
-        project = WebDriverWait (self.driver,30).until(EC.element_to_be_clickable(self.ADD_PROJ))
+        project = WebDriverWait (self.driver,40).until(EC.element_to_be_clickable(self.ADD_PROJ))
         project.click()
+        sleep(4)
 
